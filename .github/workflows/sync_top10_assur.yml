@@ -2,7 +2,7 @@ name: Sync Kaggle Notebooks aufilduboamp
 
 on:
   schedule:
-    - cron: '20 8 * * *'  # Runs daily at midnight
+    - cron: '23 8 * * *'  # Runs daily at midnight
   workflow_dispatch:
 
 jobs:
@@ -16,7 +16,7 @@ jobs:
     - name: Setup Python
       uses: actions/setup-python@v2
       with:
-        python-version: 3.11
+        python-version: 3.x
 
     - name: Install kaggle
       run: pip install kaggle

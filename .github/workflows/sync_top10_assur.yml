@@ -2,7 +2,7 @@ name: Sync Kaggle Notebooks aufilduboamp
 
 on:
   schedule:
-    - cron: '37 7 * * *'  # Runs daily at midnight
+    - cron: '42 7 * * *'  # Runs daily at midnight
   workflow_dispatch:
 
 jobs:

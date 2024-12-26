@@ -2,7 +2,7 @@ name: Sync Kaggle Notebooks aufilduboamp
 
 on:
   schedule:
-    - cron: '02 8 * * *'  # Runs daily at midnight
+    - cron: '04 8 * * *'  # Runs daily at midnight
   workflow_dispatch:
 
 jobs:
@@ -25,7 +25,7 @@ jobs:
       env:
         KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
         KAGGLE_KEY: ${{ secrets.KAGGLE_KEY }}
-      run: kaggle kernels pull <KAGGLE_USERNAME>/092-boamp-assurances-top10-acheteurs -p .
+      run: kaggle kernels pull aufilduboamp/092-boamp-assurances-top10-acheteurs.ipynb -p .
      
 
     - name: Commit and push changes
